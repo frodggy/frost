@@ -1,5 +1,5 @@
 local xml = frost.xml
-local name = frost.param
+local name = frost.params.name
 
 return xml.html {charset="utf-8", lang="en"} {
   xml.head {

@@ -4,6 +4,8 @@ use router::Router;
 use crate::{FrostRouter, renderer};
 
 
+
+
 pub struct FrostSever {
   host: String,
   port: u16,
@@ -22,7 +24,7 @@ impl FrostSever {
     let mut router = Router::new();
 
     routes.iter().for_each(|(route, path)| {
-      
+
       let handler = renderer::render_handler(path.to_string(), route.to_string());
       router.get(route, handler, path);
     });
